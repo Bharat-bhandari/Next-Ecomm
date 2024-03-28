@@ -55,14 +55,16 @@ export const authOptions = {
         session.user.id = user._id.toString();
 
         // 3. Return session
-        const newSession = {
-          ...session,
-          user: {
-            ...session.user,
-            role: user.role,
-          },
-        };
-        return newSession;
+        // const newSession = {
+        //   ...session,
+        //   user: {
+        //     ...session.user,
+        //     role: user.role,
+        //   },
+        // };
+        // return newSession;
+
+        return session;
       } catch (error) {
         console.error("Error during session callback:", error);
         // Return an empty session
